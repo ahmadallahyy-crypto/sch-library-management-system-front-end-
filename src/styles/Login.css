@@ -1,0 +1,153 @@
+/* ── Root ── */
+.login-root {
+  min-height: 100vh;
+  background: var(--bg-base);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Top navbar ── */
+.login-nav {
+  display: flex;
+  align-items: center;
+  padding: 22px 52px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+.login-nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-decoration: none;
+}
+
+.login-nav-logo-icon {
+  width: 40px; height: 40px;
+  background: var(--accent);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.login-nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.login-nav-logo-text span { color: var(--accent); }
+
+/* ── Center content ── */
+.login-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 68px 26px;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.login-heading {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* ── Form ── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── Field ── */
+.login-field { display: flex; flex-direction: column; }
+
+.login-field label {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.login-field .input {
+  padding: 20px 24px;
+  font-size: 1.5rem;
+  border: 2px solid var(--border-strong);
+  border-radius: 0;
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.login-field .input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+.login-field .input.input-error {
+  border-color: var(--danger);
+}
+
+/* ── Inline validation message ── */
+.field-msg {
+  margin-top: 6px;
+  font-size: 1.25rem;
+  color: var(--danger);
+  font-weight: 500;
+}
+
+/* ── Remember me + Forgot password row ── */
+.login-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.remember-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.remember-row input[type="checkbox"] {
+  width: 20px; height: 20px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.forgot-link {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+.forgot-link:hover { color: var(--accent); }
+
+/* ── Sign in button ── */
+.login-btn {
+  width: auto;
+  min-width: 200px;
+  justify-content: center;
+  padding: 24px 60px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border-radius: 0px;
+  align-self: flex-start;
+}
