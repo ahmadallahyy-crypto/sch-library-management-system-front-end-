@@ -20,8 +20,8 @@
   --danger-dim:     #f1606318;
   --info:           #5b9cf6;
   --info-dim:       #5b9cf618;
-  --sidebar-w:      260px;
-  --topbar-h:       90px;
+  --sidebar-w:      250px;
+  --topbar-h:       68px;
   --font-display:   'Playfair Display', Georgia, serif;
   --font-body:      'DM Sans', sans-serif;
   --radius-sm:      6px;
@@ -35,7 +35,7 @@
 /* ─── Reset ─────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { font-size: 16px; }
+html { font-size: 15px; }
 
 body {
   font-family: var(--font-body);
@@ -64,11 +64,11 @@ h1, h2, h3, h4 {
 .btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 20px;
+  gap: 7px;
+  padding: 9px 18px;
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
   border: none;
@@ -86,19 +86,19 @@ h1, h2, h3, h4 {
 .btn-danger { background: var(--danger-dim); color: var(--danger); border: 1px solid #f1606330; }
 .btn-danger:hover { background: var(--danger); color: #fff; }
 
-.btn-sm { padding: 6px 14px; font-size: 0.9rem; }
-.btn-icon { padding: 8px; border-radius: var(--radius-sm); }
+.btn-sm { padding: 5px 12px; font-size: 0.82rem; }
+.btn-icon { padding: 7px; border-radius: var(--radius-sm); }
 
 /* ─── Form Controls ──────────────────────────────────────────────────── */
 .input, .select, .textarea {
   width: 100%;
-  padding: 18px 20px;
+  padding: 11px 14px;
   background: var(--bg-elevated);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   color: var(--text-primary);
   font-family: var(--font-body);
-  font-size: 1.1rem;
+  font-size: 0.92rem;
   transition: border-color 0.15s, box-shadow 0.15s;
   outline: none;
 }
@@ -111,14 +111,14 @@ h1, h2, h3, h4 {
 
 label {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-secondary);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   letter-spacing: 0.01em;
 }
 
-.form-group { margin-bottom: 20px; }
+.form-group { margin-bottom: 18px; }
 
 /* ─── Table ──────────────────────────────────────────────────────────── */
 .table-wrap {
@@ -131,7 +131,7 @@ label {
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 thead tr {
@@ -140,9 +140,9 @@ thead tr {
 }
 
 thead th {
-  padding: 14px 20px;
+  padding: 12px 16px;
   text-align: left;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--text-muted);
   letter-spacing: 0.06em;
@@ -158,10 +158,10 @@ tbody tr:last-child { border-bottom: none; }
 tbody tr:hover { background: #ffffff04; }
 
 tbody td {
-  padding: 16px 20px;
+  padding: 13px 16px;
   color: var(--text-primary);
   vertical-align: middle;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 /* ─── Badge ──────────────────────────────────────────────────────────── */
@@ -169,9 +169,9 @@ tbody td {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 99px;
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -187,7 +187,7 @@ tbody td {
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  padding: 24px;
 }
 
 /* ─── Modal ──────────────────────────────────────────────────────────── */
@@ -208,7 +208,7 @@ tbody td {
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
   width: 100%;
-  max-width: 520px;
+  max-width: 500px;
   box-shadow: var(--shadow-lg);
   animation: slideUp 0.2s ease;
 }
@@ -217,28 +217,28 @@ tbody td {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 22px 28px 18px;
+  padding: 20px 24px 16px;
   border-bottom: 1px solid var(--border);
 }
 
 .modal-header h3 {
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
-.modal-body { padding: 28px; }
+.modal-body { padding: 24px; }
 
 .modal-footer {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
-  padding: 18px 28px;
+  gap: 10px;
+  padding: 16px 24px;
   border-top: 1px solid var(--border);
 }
 
 /* ─── Page Shell ─────────────────────────────────────────────────────── */
 .page {
-  padding: 40px 44px;
+  padding: 32px 36px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -247,15 +247,15 @@ tbody td {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   gap: 16px;
 }
 
-.page-title { font-size: 2rem; }
+.page-title { font-size: 1.65rem; }
 .page-subtitle {
-  font-size: 1rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  margin-top: 4px;
+  margin-top: 3px;
   font-family: var(--font-body);
   font-weight: 400;
 }
@@ -263,17 +263,17 @@ tbody td {
 /* ─── Search Bar ─────────────────────────────────────────────────────── */
 .search-bar {
   position: relative;
-  max-width: 360px;
+  max-width: 340px;
 }
 .search-bar .search-icon {
   position: absolute;
-  left: 12px;
+  left: 11px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
   pointer-events: none;
 }
-.search-bar input { padding-left: 40px; }
+.search-bar input { padding-left: 36px; }
 
 /* ─── Animations ─────────────────────────────────────────────────────── */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -286,16 +286,16 @@ tbody td {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px;
+  padding: 64px 24px;
   color: var(--text-muted);
-  gap: 14px;
+  gap: 12px;
   text-align: center;
 }
 .empty-state svg { opacity: 0.3; }
-.empty-state p { font-size: 1rem; }
+.empty-state p { font-size: 0.9rem; }
 
 /* ─── Divider ────────────────────────────────────────────────────────── */
-.divider { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
 
 /* ─── Utility ────────────────────────────────────────────────────────── */
 .text-accent    { color: var(--accent); }
@@ -310,4 +310,4 @@ tbody td {
 .gap-2          { gap: 8px; }
 .gap-3          { gap: 12px; }
 .fw-500         { font-weight: 500; }
-.fs-sm          { font-size: 0.9rem; }
+.fs-sm          { font-size: 0.85rem; }

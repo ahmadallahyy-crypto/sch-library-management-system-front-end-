@@ -10,7 +10,7 @@
 .login-nav {
   display: flex;
   align-items: center;
-  padding: 22px 52px;
+  padding: 16px 40px;
   border-bottom: 1px solid var(--border);
   background: var(--bg-surface);
 }
@@ -18,21 +18,21 @@
 .login-nav-logo {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 10px;
   text-decoration: none;
 }
 
 .login-nav-logo-icon {
-  width: 40px; height: 40px;
+  width: 34px; height: 34px;
   background: var(--accent);
-  border-radius: 10px;
+  border-radius: 9px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
 
 .login-nav-logo-text {
   font-family: var(--font-display);
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--text-primary);
 }
@@ -45,47 +45,45 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 68px 26px;
+  padding: 48px 24px;
 }
 
 .login-box {
   width: 100%;
-  max-width: 1000px;
+  max-width: 480px;
 }
 
 .login-heading {
-  font-size: 6rem;
+  font-size: 2.6rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   text-align: center;
-  line-height: 1.1;
+  line-height: 1.15;
 }
 
 /* ── Form ── */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 20px;
 }
 
 /* ── Field ── */
 .login-field { display: flex; flex-direction: column; }
 
 .login-field label {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 10px;
-  letter-spacing: 0;
-  text-transform: none;
+  margin-bottom: 7px;
 }
 
 .login-field .input {
-  padding: 20px 24px;
-  font-size: 1.5rem;
-  border: 2px solid var(--border-strong);
-  border-radius: 0;
+  padding: 12px 15px;
+  font-size: 0.92rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
   background: var(--bg-elevated);
   color: var(--text-primary);
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -96,16 +94,28 @@
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
-.login-field .input.input-error {
-  border-color: var(--danger);
-}
+.login-field .input.input-error { border-color: var(--danger); }
 
 /* ── Inline validation message ── */
 .field-msg {
-  margin-top: 6px;
-  font-size: 1.25rem;
+  margin-top: 5px;
+  font-size: 0.8rem;
   color: var(--danger);
   font-weight: 500;
+}
+
+/* ── API error ── */
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: var(--danger-dim);
+  border: 1px solid #f1606330;
+  border-radius: var(--radius-sm);
+  color: var(--danger);
+  font-size: 0.85rem;
+  animation: slideUp 0.2s ease;
 }
 
 /* ── Remember me + Forgot password row ── */
@@ -118,20 +128,20 @@
 .remember-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 1.5rem;
+  gap: 8px;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   cursor: pointer;
 }
 
 .remember-row input[type="checkbox"] {
-  width: 20px; height: 20px;
+  width: 15px; height: 15px;
   accent-color: var(--accent);
   cursor: pointer;
 }
 
 .forgot-link {
-  font-size: 1.5rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -142,12 +152,30 @@
 
 /* ── Sign in button ── */
 .login-btn {
-  width: auto;
-  min-width: 200px;
+  width: 100%;
   justify-content: center;
-  padding: 24px 60px;
-  font-size: 1.8rem;
+  padding: 12px;
+  font-size: 0.95rem;
   font-weight: 600;
-  border-radius: 0px;
-  align-self: flex-start;
+  border-radius: 99px;
+  margin-top: 4px;
 }
+
+/* ── Footer ── */
+.login-footer {
+  text-align: center;
+  padding: 20px 24px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  background: var(--bg-surface);
+}
+
+.login-footer a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin: 0 8px;
+  transition: color 0.15s;
+}
+
+.login-footer a:hover { color: var(--accent); }

@@ -7,22 +7,21 @@ export default function Login() {
   const { login } = useAuth();
   const navigate  = useNavigate();
 
-  const [form, setForm]       = useState({ email: '', password: '', remember: false });
-  const [errors, setErrors]   = useState({ email: '', password: '' });
+  const [form, setForm]         = useState({ email: '', password: '', remember: false });
+  const [errors, setErrors]     = useState({ email: '', password: '' });
   const [apiError, setApiError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading]   = useState(false);
 
   const handleChange = e => {
     const { name, value, type, checked } = e.target;
     setForm(f => ({ ...f, [name]: type === 'checkbox' ? checked : value }));
-    // Clear field error on change
     if (errors[name]) setErrors(er => ({ ...er, [name]: '' }));
   };
 
   const validate = () => {
     const e = { email: '', password: '' };
     if (!form.email)                          e.email    = 'Please enter a valid email address';
-    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email  = 'Please enter a valid email address';
+    else if (!/\S+@\S+\.\S+/.test(form.email)) e.email    = 'Please enter a valid email address';
     if (!form.password)                       e.password = 'This field cannot be blank';
     setErrors(e);
     return !e.email && !e.password;
@@ -48,7 +47,7 @@ export default function Login() {
       <nav className="login-nav">
         <Link to="/login" className="login-nav-logo">
           <div className="login-nav-logo-icon">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="#0d0f14" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
               <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
@@ -65,7 +64,6 @@ export default function Login() {
 
           <form className="login-form" onSubmit={handleSubmit} noValidate>
 
-            {/* API error */}
             {apiError && (
               <div className="login-error">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
@@ -78,7 +76,6 @@ export default function Login() {
               </div>
             )}
 
-            {/* Email */}
             <div className="login-field">
               <label htmlFor="email">Email</label>
               <input
@@ -92,7 +89,6 @@ export default function Login() {
               {errors.email && <span className="field-msg">{errors.email}</span>}
             </div>
 
-            {/* Password */}
             <div className="login-field">
               <label htmlFor="password">Password</label>
               <input
@@ -105,7 +101,6 @@ export default function Login() {
               {errors.password && <span className="field-msg">{errors.password}</span>}
             </div>
 
-            {/* Remember me + Forgot password */}
             <div className="login-bottom-row">
               <label className="remember-row">
                 <input type="checkbox" name="remember" checked={form.remember} onChange={handleChange} />
@@ -114,7 +109,6 @@ export default function Login() {
               <Link to="/forgot-password" className="forgot-link">Forgot password?</Link>
             </div>
 
-            {/* Submit */}
             <button type="submit" className="btn btn-primary login-btn" disabled={loading}>
               {loading ? 'Signing in…' : 'Sign in'}
             </button>
@@ -122,6 +116,11 @@ export default function Login() {
           </form>
         </div>
       </div>
+
+      {/* ── Footer ── */}
+      <footer className="login-footer">
+        LibraryMS &copy; {new Date().getFullYear()} — All rights reserved
+      </footer>
 
     </div>
   );
