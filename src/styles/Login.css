@@ -178,7 +178,7 @@
   background: var(--bg-surface);
 }
 
-.login-footer-left { color: var(--text-secondary); font-size: 0.95rem; }
+.login-footer-left { color: var(--text-secondary); font-size: 1rem !important; }
 .login-footer-right { color: var(--text-muted); }
 
 .login-footer a {
