@@ -119,7 +119,8 @@ export default function Login() {
 
       {/* ── Footer ── */}
       <footer className="login-footer">
-        LibraryMS &copy; {new Date().getFullYear()} — All rights reserved
+        <span className="login-footer-left">ahmadallahyy</span>
+        <span className="login-footer-right">LibraryMS &copy; {new Date().getFullYear()} — All rights reserved</span>
       </footer>
 
     </div>

@@ -25,7 +25,7 @@
 .login-nav-logo-icon {
   width: 34px; height: 34px;
   background: var(--accent);
-  border-radius: 9px;
+  border-radius: 9px; /* logo icon keeps its rounded square look */
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -40,12 +40,13 @@
 .login-nav-logo-text span { color: var(--accent); }
 
 /* ── Center content: holds the form, vertically centered ── */
+/* Reduced top padding so "Welcome!" sits much closer to the navbar */
 .login-body {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 18px; /* reduced top padding so the form sits closer to the navbar */
+  padding: 4px 18px 32px;
 }
 
 .login-box {
@@ -57,7 +58,7 @@
   font-size: 2.6rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 32px;
+  margin-bottom: 24px; /* reduced gap below heading */
   text-align: center;
   line-height: 1.15;
 }
@@ -66,23 +67,23 @@
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 /* ── Field ── */
 .login-field { display: flex; flex-direction: column; }
 
 .login-field label {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
-/* Input field — square corners, no border-radius */
+/* Input field — smaller container, smaller text, square corners */
 .login-field .input {
-  padding: 14px 17px;
-  font-size: 1rem;
+  padding: 9px 12px;
+  font-size: 0.85rem;
   border: 1px solid var(--border-strong);
   border-radius: 0; /* square corners, no rounding */
   background: var(--bg-elevated);
@@ -100,7 +101,7 @@
 /* ── Inline validation message (e.g. "Please enter a valid email") ── */
 .field-msg {
   margin-top: 5px;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--danger);
   font-weight: 500;
 }
@@ -113,9 +114,9 @@
   padding: 10px 14px;
   background: var(--danger-dim);
   border: 1px solid #f1606330;
-  border-radius: var(--radius-sm);
+  border-radius: 0; /* square corners, consistent with inputs/button */
   color: var(--danger);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   animation: slideUp 0.2s ease;
 }
 
@@ -130,19 +131,19 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   cursor: pointer;
 }
 
 .remember-row input[type="checkbox"] {
-  width: 15px; height: 15px;
+  width: 14px; height: 14px;
   accent-color: var(--accent);
   cursor: pointer;
 }
 
 .forgot-link {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -153,26 +154,32 @@
 
 /* ── Sign in button — auto width, left-aligned, square corners ── */
 .login-btn {
-  width: auto;            /* no longer stretches full width */
-  min-width: 160px;       /* keeps a reasonable minimum click target */
+  width: auto;
+  min-width: 140px;
   justify-content: center;
-  padding: 12px 36px;
-  font-size: 0.95rem;
+  padding: 10px 30px;
+  font-size: 0.88rem;
   font-weight: 600;
-  border-radius: 0;       /* square corners, no rounding */
-  margin-top: 4px;
+  border-radius: 0 !important; /* overrides .btn's border-radius from global.css */
+  margin-top: 2px;
   align-self: flex-start; /* sits at the left edge of the form, not centered */
 }
 
 /* ── Footer ── */
+/* Split into two halves: name on the left, copyright on the right */
 .login-footer {
-  text-align: center;
-  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
   font-size: 0.78rem;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
   background: var(--bg-surface);
 }
+
+.login-footer-left { color: var(--text-secondary); }
+.login-footer-right { color: var(--text-muted); }
 
 .login-footer a {
   color: var(--text-secondary);
