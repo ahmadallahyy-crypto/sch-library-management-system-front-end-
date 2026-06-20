@@ -1,8 +1,6 @@
 
 # School Library Management System
 
-# School Library Management System
-
 <p align="center">
   <img src="public/og-image.png" alt="School Library Management System" width="100%" />
 </p>
@@ -17,12 +15,6 @@
   </a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/-Node.js-101B2D?style=for-the-badge&logo=node.js&logoColor=339933" alt="Node.js" />
-  <img src="https://img.shields.io/badge/-Express-101B2D?style=for-the-badge&logo=express&logoColor=ffffff" alt="Express" />
-  <img src="https://img.shields.io/badge/-MongoDB-101B2D?style=for-the-badge&logo=mongodb&logoColor=47A248" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/-React-101B2D?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-</p>
 
 Simple React frontend for a library management system (Vite + React).
 
