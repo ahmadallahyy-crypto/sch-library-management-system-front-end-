@@ -1,6 +1,5 @@
 
 # School Library Management System
-# School Library Management System
 
 <p align="center">
   <img src="public/og-image.png" alt="School Library Management System" width="100%" />
