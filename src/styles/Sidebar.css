@@ -146,8 +146,7 @@
 }
 
 /* ── Logout button ── */
-.nav-link.logout-btn { color: var(--text-on-navy-dim); }
 .nav-link.logout-btn:hover {
-  background: var(--danger-dim);
-  color: #ff8a8a;
+  background: var(--accent-dim);
+  color: var(--accent);
 }
