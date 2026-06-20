@@ -1,14 +1,27 @@
 
 # School Library Management System
 
+# School Library Management System
+
 <p align="center">
   <img src="public/og-image.png" alt="School Library Management System" width="100%" />
 </p>
 
 <p align="center">
   <a href="https://sch-library-management-system-front.vercel.app">
-    <img src="https://img.shields.io/badge/View-Live%20Demo-C9A227?style=for-the-badge" alt="Live Demo" />
+    <img src="https://img.shields.io/badge/-Live%20Demo-101B2D?style=for-the-badge&logo=vercel&logoColor=C9A227" alt="Live Demo" />
   </a>
+  &nbsp;&nbsp;
+  <a href="public/og-image.png">
+    <img src="https://img.shields.io/badge/-Preview-101B2D?style=for-the-badge&logo=googlechrome&logoColor=C9A227" alt="Preview" />
+  </a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/-Node.js-101B2D?style=for-the-badge&logo=node.js&logoColor=339933" alt="Node.js" />
+  <img src="https://img.shields.io/badge/-Express-101B2D?style=for-the-badge&logo=express&logoColor=ffffff" alt="Express" />
+  <img src="https://img.shields.io/badge/-MongoDB-101B2D?style=for-the-badge&logo=mongodb&logoColor=47A248" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/-React-101B2D?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
 </p>
 
 Simple React frontend for a library management system (Vite + React).
