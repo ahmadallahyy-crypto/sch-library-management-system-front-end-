@@ -33,11 +33,7 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-logo">
         <div className="sidebar-logo-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
-            stroke="#0d0f14" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
-            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
-          </svg>
+          <img src="/logo.png" alt="LibraryMS logo" />
         </div>
         <span className="sidebar-logo-text">Library<span>MS</span></span>
       </div>
@@ -82,7 +78,7 @@ export default function Sidebar() {
             <div className="sidebar-user-role">{attendant?.role || 'attendant'}</div>
           </div>
         </div>
-        <button className="nav-link" onClick={handleLogout} style={{ marginTop: 4 }}>
+        <button className="nav-link logout-btn" onClick={handleLogout} style={{ marginTop: 4 }}>
           <Icon d={ICONS.logout} size={16} /> Log out
         </button>
       </div>
