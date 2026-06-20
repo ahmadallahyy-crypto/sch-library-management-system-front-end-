@@ -173,7 +173,7 @@
   font-weight: 700;
   background: var(--navy) !important;
   color: #fff !important;
-  border-radius: 4px !important;
+  border-radius: 0 !important;
   margin-top: 4px;
   align-self: flex-start;
   letter-spacing: 0.02em;
