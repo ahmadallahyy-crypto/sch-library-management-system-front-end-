@@ -1,11 +1,16 @@
 
 # School Library Management System
+# School Library Management System
 
 <p align="center">
   <img src="public/og-image.png" alt="School Library Management System" width="100%" />
 </p>
 
-# LibraryMS
+<p align="center">
+  <a href="https://sch-library-management-system-front.vercel.app">
+    <img src="https://img.shields.io/badge/View-Live%20Demo-C9A227?style=for-the-badge" alt="Live Demo" />
+  </a>
+</p>
 
 Simple React frontend for a library management system (Vite + React).
 
