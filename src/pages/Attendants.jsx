@@ -41,6 +41,7 @@ export default function Attendants() {
     } finally { setLoading(false); }
   };
 
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => { if (isAdmin) load(); else setLoading(false); }, [isAdmin]);
 
   useEffect(() => {

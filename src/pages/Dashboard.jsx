@@ -45,6 +45,7 @@ function StatCard({ label, value, icon, colorKey, sub }) {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 function timeAgo(dateStr) {
   const diff = Date.now() - new Date(dateStr);
   const m = Math.floor(diff / 60000);

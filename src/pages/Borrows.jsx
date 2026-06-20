@@ -49,7 +49,9 @@ export default function Borrows() {
         ]);
         setBooks(bkRes.data.data    || []);
         setStudents(stRes.data.data || []);
-      } catch (_) {}
+      } catch {
+        // Silent fail - optional data (books/students) not critical
+      }
     };
     fetchAll();
     loadBorrows();
