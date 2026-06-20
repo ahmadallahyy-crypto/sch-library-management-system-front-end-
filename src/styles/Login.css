@@ -1,4 +1,4 @@
-/* ── Root: full page wrapper, column layout for nav + body + footer ── */
+/* ── Root ── */
 .login-root {
   min-height: 100vh;
   background: var(--bg-base);
@@ -6,13 +6,22 @@
   flex-direction: column;
 }
 
-/* ── Top navbar with logo ── */
+/* ── Top navbar — navy, matches CV header ── */
 .login-nav {
   display: flex;
   align-items: center;
   padding: 16px 40px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg-surface);
+  background: var(--navy);
+  position: relative;
+}
+
+/* Thin gold gradient line under navbar, like the CV header underline */
+.login-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), rgba(241,196,15,0.2) 70%, transparent);
 }
 
 .login-nav-logo {
@@ -25,7 +34,7 @@
 .login-nav-logo-icon {
   width: 34px; height: 34px;
   background: var(--accent);
-  border-radius: 9px; /* logo icon keeps its rounded square look */
+  border-radius: var(--radius-sm);
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
@@ -34,31 +43,33 @@
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #fff;
 }
 
 .login-nav-logo-text span { color: var(--accent); }
 
-/* ── Center content: holds the form, vertically centered ── */
-/* Reduced top padding so "Welcome!" sits much closer to the navbar */
+/* ── Center content ── */
 .login-body {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2px 18px 32px;
+  padding: 32px 18px;
 }
 
 .login-box {
   width: 100%;
   max-width: 480px;
+  background: var(--bg-surface);
+  padding: 40px 36px;
+  box-shadow: var(--shadow-lg);
 }
 
 .login-heading {
-  font-size: 2.6rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 24px; /* reduced gap below heading */
+  color: var(--navy);
+  margin-bottom: 24px;
   text-align: center;
   line-height: 1.15;
 }
@@ -75,17 +86,16 @@
 
 .login-field label {
   font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--navy);
   margin-bottom: 6px;
 }
 
-/* Input field — smaller container, smaller text, square corners */
 .login-field .input {
-  padding: 14px 16px;
-  font-size: 1rem;
+  padding: 12px 14px;
+  font-size: 0.92rem;
   border: 1px solid var(--border-strong);
-  border-radius: 0; /* square corners, no rounding */
+  border-radius: 0;
   background: var(--bg-elevated);
   color: var(--text-primary);
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -98,23 +108,23 @@
 
 .login-field .input.input-error { border-color: var(--danger); }
 
-/* ── Inline validation message (e.g. "Please enter a valid email") ── */
+/* ── Inline validation message ── */
 .field-msg {
   margin-top: 5px;
   font-size: 0.78rem;
   color: var(--danger);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-/* ── API error banner (e.g. wrong password from backend) ── */
+/* ── API error banner ── */
 .login-error {
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 10px 14px;
   background: var(--danger-dim);
-  border: 1px solid #f1606330;
-  border-radius: 0; /* square corners, consistent with inputs/button */
+  border: 1px solid #d23c3c30;
+  border-radius: 0;
   color: var(--danger);
   font-size: 0.82rem;
   animation: slideUp 0.2s ease;
@@ -131,58 +141,64 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   cursor: pointer;
 }
 
 .remember-row input[type="checkbox"] {
   width: 14px; height: 14px;
-  accent-color: var(--accent);
+  accent-color: var(--navy);
   cursor: pointer;
 }
 
 .forgot-link {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
+  font-size: 0.85rem;
+  color: var(--navy);
   text-decoration: underline;
   text-underline-offset: 3px;
+  font-weight: 600;
   transition: color 0.15s;
 }
 
-.forgot-link:hover { color: var(--accent); }
+.forgot-link:hover { color: var(--navy-hover); }
 
-/* ── Sign in button — auto width, left-aligned, square corners ── */
+/* ── Sign in button — navy like the CV's print button ── */
 .login-btn {
   width: auto;
   min-width: 140px;
   justify-content: center;
-  padding: 10px 30px;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 0 !important; /* overrides .btn's border-radius from global.css */
-  margin-top: 2px;
-  align-self: flex-start; /* sits at the left edge of the form, not centered */
+  padding: 11px 32px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  background: var(--navy) !important;
+  color: #fff !important;
+  border-radius: 4px !important;
+  margin-top: 4px;
+  align-self: flex-start;
+  letter-spacing: 0.02em;
+}
+
+.login-btn:hover {
+  background: var(--navy-hover) !important;
 }
 
 /* ── Footer ── */
-/* Split into two halves: name on the left, copyright on the right */
 .login-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 16px 40px;
-  font-size: 1rem;
-  color: var(--text-muted);
-  border-top: 1px solid var(--border);
-  background: var(--bg-surface);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--navy);
 }
 
-.login-footer-left { color: var(--text-secondary); font-size: 1rem !important; }
-.login-footer-right { color: var(--text-muted); }
+.login-footer-left { color: var(--accent); font-weight: 600; }
+.login-footer-right { color: var(--text-on-navy-dim); }
 
 .login-footer a {
-  color: var(--text-secondary);
+  color: var(--text-on-navy-dim);
   text-decoration: none;
   margin: 0 8px;
   transition: color 0.15s;

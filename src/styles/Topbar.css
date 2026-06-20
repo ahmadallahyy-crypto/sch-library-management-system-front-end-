@@ -6,6 +6,7 @@
   height: var(--topbar-h);
   background: var(--bg-surface);
   border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,9 +18,9 @@
 
 .topbar-title {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--navy);
   line-height: 1.2;
 }
 
@@ -27,7 +28,7 @@
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
 }
 
@@ -36,7 +37,7 @@
 
 .topbar-right { display: flex; align-items: center; gap: 16px; }
 
-.topbar-date { font-size: 0.88rem; color: var(--text-muted); }
+.topbar-date { font-size: 0.85rem; color: var(--text-secondary); }
 
 .topbar-divider { width: 1px; height: 22px; background: var(--border-strong); }
 
@@ -45,13 +46,12 @@
   align-items: center;
   gap: 6px;
   padding: 5px 12px;
-  background: var(--accent-dim);
-  border: 1px solid #c9a84c22;
+  background: var(--navy);
   border-radius: 99px;
-  font-size: 0.82rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--accent);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 

@@ -1,35 +1,48 @@
-/* ─── Design Tokens ─────────────────────────────────────────────────── */
+/* ─── Design Tokens — Navy & Gold theme ─────────────────────────────── */
 :root {
-  --bg-base:        #0d0f14;
-  --bg-surface:     #13161e;
-  --bg-elevated:    #1a1e2a;
-  --bg-hover:       #20253300;
-  --border:         #ffffff0f;
-  --border-strong:  #ffffff1a;
-  --accent:         #c9a84c;
-  --accent-dim:     #c9a84c22;
-  --accent-hover:   #dbbf6a;
-  --text-primary:   #eef0f6;
-  --text-secondary: #8b90a0;
-  --text-muted:     #4e5364;
-  --success:        #3ecf8e;
-  --success-dim:    #3ecf8e18;
-  --warning:        #f5a524;
-  --warning-dim:    #f5a52418;
-  --danger:         #f16063;
-  --danger-dim:     #f1606318;
-  --info:           #5b9cf6;
-  --info-dim:       #5b9cf618;
+  --bg-base:        #c9cdd8;   /* page background — light grey-blue */
+  --bg-surface:     #ffffff;   /* cards, sidebar, topbar — white */
+  --bg-elevated:    #f4f5f8;   /* inputs, hover states — light grey */
+  --bg-hover:       #eef0f5;
+
+  --border:         #0e1f4e14; /* faint navy divider */
+  --border-strong:  #0e1f4e30;
+
+  --accent:         #f1c40f;   /* gold accent */
+  --accent-dim:     #f1c40f22;
+  --accent-hover:   #d4ac0d;
+
+  --navy:           #0e1f4e;   /* deep navy — header, sidebar, buttons */
+  --navy-hover:     #1749d4;   /* navy button hover */
+
+  --text-primary:   #1a1a1a;   /* body text — near-black */
+  --text-secondary: #666666;   /* org names, secondary text */
+  --text-muted:     #9499a8;
+  --text-on-navy:   #ffffff;   /* text on navy backgrounds */
+  --text-on-navy-dim: rgba(255,255,255,0.7);
+
+  --success:        #2e9e6b;
+  --success-dim:    #2e9e6b18;
+  --warning:        #f1c40f;
+  --warning-dim:    #f1c40f22;
+  --danger:         #d23c3c;
+  --danger-dim:     #d23c3c18;
+  --info:           #1749d4;
+  --info-dim:       #1749d418;
+
   --sidebar-w:      250px;
   --topbar-h:       68px;
+
   --font-display:   'Playfair Display', Georgia, serif;
   --font-body:      'DM Sans', sans-serif;
-  --radius-sm:      6px;
-  --radius-md:      10px;
-  --radius-lg:      14px;
-  --shadow-sm:      0 1px 3px #00000040;
-  --shadow-md:      0 4px 16px #00000050;
-  --shadow-lg:      0 8px 32px #00000060;
+
+  --radius-sm:      4px;
+  --radius-md:      6px;
+  --radius-lg:      8px;
+
+  --shadow-sm:      0 1px 3px #0e1f4e15;
+  --shadow-md:      0 4px 16px #0e1f4e1a;
+  --shadow-lg:      0 8px 40px #0e1f4e28;
 }
 
 /* ─── Reset ─────────────────────────────────────────────────────────── */
@@ -57,7 +70,7 @@ h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 600;
   line-height: 1.25;
-  color: var(--text-primary);
+  color: var(--navy);
 }
 
 /* ─── Buttons ────────────────────────────────────────────────────────── */
@@ -69,7 +82,7 @@ h1, h2, h3, h4 {
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
   border: none;
   transition: all 0.18s ease;
@@ -77,13 +90,14 @@ h1, h2, h3, h4 {
   text-decoration: none;
 }
 
-.btn-primary { background: var(--accent); color: #0d0f14; }
-.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); box-shadow: 0 4px 14px #c9a84c30; }
+/* Primary button — navy with gold-tinted hover, matches CV print button */
+.btn-primary { background: var(--navy); color: #fff; }
+.btn-primary:hover { background: var(--navy-hover); transform: translateY(-1px); box-shadow: 0 4px 14px #1749d430; }
 
 .btn-ghost { background: transparent; color: var(--text-secondary); border: 1px solid var(--border-strong); }
-.btn-ghost:hover { background: var(--bg-elevated); color: var(--text-primary); }
+.btn-ghost:hover { background: var(--bg-elevated); color: var(--navy); }
 
-.btn-danger { background: var(--danger-dim); color: var(--danger); border: 1px solid #f1606330; }
+.btn-danger { background: var(--danger-dim); color: var(--danger); border: 1px solid #d23c3c30; }
 .btn-danger:hover { background: var(--danger); color: #fff; }
 
 .btn-sm { padding: 5px 12px; font-size: 0.82rem; }
@@ -107,13 +121,13 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 .input::placeholder, .textarea::placeholder { color: var(--text-muted); }
-.select option { background: var(--bg-elevated); }
+.select option { background: #fff; }
 
 label {
   display: block;
   font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-secondary);
+  font-weight: 600;
+  color: var(--navy);
   margin-bottom: 6px;
   letter-spacing: 0.01em;
 }
@@ -135,17 +149,17 @@ table {
 }
 
 thead tr {
-  background: var(--bg-elevated);
+  background: var(--navy);
   border-bottom: 1px solid var(--border-strong);
 }
 
 thead th {
   padding: 12px 16px;
   text-align: left;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  letter-spacing: 0.06em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -153,9 +167,10 @@ thead th {
 tbody tr {
   border-bottom: 1px solid var(--border);
   transition: background 0.12s;
+  background: var(--bg-surface);
 }
 tbody tr:last-child { border-bottom: none; }
-tbody tr:hover { background: #ffffff04; }
+tbody tr:hover { background: var(--bg-elevated); }
 
 tbody td {
   padding: 13px 16px;
@@ -171,13 +186,13 @@ tbody td {
   gap: 5px;
   padding: 3px 10px;
   border-radius: 99px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 .badge-success { background: var(--success-dim); color: var(--success); }
-.badge-warning { background: var(--warning-dim); color: var(--warning); }
+.badge-warning { background: var(--warning-dim); color: #a07c00; }
 .badge-danger  { background: var(--danger-dim);  color: var(--danger);  }
 .badge-info    { background: var(--info-dim);    color: var(--info);    }
 .badge-muted   { background: var(--bg-elevated); color: var(--text-muted); }
@@ -188,12 +203,13 @@ tbody td {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 24px;
+  box-shadow: var(--shadow-sm);
 }
 
 /* ─── Modal ──────────────────────────────────────────────────────────── */
 .modal-overlay {
   position: fixed; inset: 0;
-  background: #00000088;
+  background: #0e1f4e60;
   backdrop-filter: blur(4px);
   z-index: 200;
   display: flex;
@@ -224,6 +240,7 @@ tbody td {
 .modal-header h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;
+  color: var(--navy);
 }
 
 .modal-body { padding: 24px; }
@@ -251,7 +268,7 @@ tbody td {
   gap: 16px;
 }
 
-.page-title { font-size: 1.65rem; }
+.page-title { font-size: 1.65rem; color: var(--navy); }
 .page-subtitle {
   font-size: 0.88rem;
   color: var(--text-secondary);
